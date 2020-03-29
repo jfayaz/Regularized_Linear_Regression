@@ -42,7 +42,8 @@ figure(1)
 plot(X, y, 'rx', 'MarkerSize', 10, 'LineWidth', 1.5);
 xlabel('X','fontWeight','bold')
 ylabel('y','fontWeight','bold')
-
+set(gca,'fontsize',14,'FontName', 'Times New Roman','LineWidth', 1.25,'TickDir','out','TickLength', [0.005 0.005])
+grid on; box on;
 
 %% ---------- Regularized Linear Regression Cost ----------
 theta = [1 ; 1];
@@ -70,7 +71,8 @@ hold on;
 plot(X, [ones(m, 1) X]*theta, '--', 'LineWidth', 2)
 legend('Data Points', 'Regularized Linear Regression')
 hold off;
-
+set(gca,'fontsize',14,'FontName', 'Times New Roman','LineWidth', 1.25,'TickDir','out','TickLength', [0.005 0.005])
+grid on; box on;
 
 %% ---------- Learning Curve for Linear Regression ----------
 lambda = 0;
@@ -82,6 +84,8 @@ title('Learning Curve for Linear Regression')
 legend('Train', 'Cross Validation')
 xlabel('Number of Training Examples','fontWeight','bold')
 ylabel('Error','fontWeight','bold')
+set(gca,'fontsize',14,'FontName', 'Times New Roman','LineWidth', 1.25,'TickDir','out','TickLength', [0.005 0.005])
+grid on; box on;
 
 fprintf('# Training_Examples\tTrain_Error\tCross-Validation_Error\n');
 for i = 1:m
